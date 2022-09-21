@@ -3,13 +3,13 @@ let col = 5;
 
  const getTable = (row, col) => {
    let arr = [];
-   let num = 0;
+   let number = 0;
    while (arr.length !== row) arr.push([])
 
    for(let eachCol = 0; eachCol < col; eachCol++){
    
         for (let eachRow = 0; eachRow < row; eachRow++)
-        arr[eachRow].push(++num);
+        arr[eachRow].push(++number);
  
 
    }
