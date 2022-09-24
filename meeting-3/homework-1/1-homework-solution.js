@@ -53,7 +53,7 @@ class Person {
     return this.cars.splice(this.cars)
   }
   getAllCarsInfo() {
-    return `${this.fullName} ${this.name}  ${this.surname} owns `;   // ?????? კონსტრუქტორ ფუნქცია Person-ში დავამატოთ მეთოდი getAllCarsInfo, რომელიც დააბრუნებს სრულ ინფორმაციას ყველა ავტომობილის შესახებ შესაბამის ფორმატში
+    return   `${this.name} owns these cars: `  // ?????? კონსტრუქტორ ფუნქცია Person-ში დავამატოთ მეთოდი getAllCarsInfo, რომელიც დააბრუნებს სრულ ინფორმაციას ყველა ავტომობილის შესახებ შესაბამის ფორმატში
   }
 }
 
