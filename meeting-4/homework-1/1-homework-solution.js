@@ -19,21 +19,26 @@
          getOwnersCount() {
           return  this.owners.length;
          },
+        
          getOwnerNames() {
-           return this.owners.fullName;
+           return this.owners   // ??? 😒😒
          },
          getFullInfo() {
            return `${this.make} ${this.model} released in ${this.year} ${this.getOwnersCount()} person owns this car. `
          }
       }
  
-     
+    
  
   }
   
 
 let duti_picoti = createCar("BMW", "525", "1999"), stodevianosto = createCar("Mercedes", "E190", 1991);
 
+console.log(duti_picoti.owner)
+
+// getOwnerNames
+// getOwnersCount
 
 
 function createPerson (name, surname, age, gender, cars = []){
@@ -63,13 +68,14 @@ function createPerson (name, surname, age, gender, cars = []){
       }
       // console.log(cars)
       
-      return `${this.name} owns these cars: ${cars} `  
+      return `${this.name} owns these cars: ${cars}`  
     }
   }
   
 }
 
 let daniel916 = createPerson("Daniel", "Barbakadze", 21, "M", []), ilona = createPerson("Elon", "Musk", 30, "M");
+
 
 
 
