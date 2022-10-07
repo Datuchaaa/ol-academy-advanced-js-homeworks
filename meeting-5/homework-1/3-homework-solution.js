@@ -55,16 +55,19 @@ const videoDetails = (video) =>
 
 const getPassedUsersFirstVideoTitle = (user) => {
   loginUser(user, 1234)
-   .then((user) => getUserVideos(user.userEmail))
+  .then((user) => {
+    console.log("user: ", user);
+    return getUserVideos(user.userEmail)
+})
    .then((videos) => videoDetails(videos[0]))
    .then((title) => console.log(title))
    .catch((error) => displayError(error));
 };
  
 
-getPassedUsersFirstVideoTitle("user4@hw.js");
+// getPassedUsersFirstVideoTitle("user4@hw.js");
 getPassedUsersFirstVideoTitle("user3@hw.js");
-getPassedUsersFirstVideoTitle("user2@hw.js");
-getPassedUsersFirstVideoTitle("user1@hw.js");
+// getPassedUsersFirstVideoTitle("user2@hw.js");
+// getPassedUsersFirstVideoTitle("user1@hw.js");
 
 console.log("Finish");

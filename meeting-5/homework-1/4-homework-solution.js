@@ -58,7 +58,8 @@ const videoDetails = (video) =>
   const getPassedUsersFirstVideoTitle = async (user) =>  {
   try{
     let logged = await loginUser(user, 1234)
-    let videos=  await getUserVideos(logged.userEmail)
+    console.log("user: ", user);
+    let videos=  await getUserVideos(logged.userEmail, )
     let videotitle =  await videoDetails(videos[0])
     console.log(videotitle)
   }
@@ -69,9 +70,9 @@ const videoDetails = (video) =>
 
  
 
-getPassedUsersFirstVideoTitle("user4@hw.js");
-getPassedUsersFirstVideoTitle("user3@hw.js");
-getPassedUsersFirstVideoTitle("user2@hw.js");
-getPassedUsersFirstVideoTitle("user1@hw.js");
+// getPassedUsersFirstVideoTitle("user4@hw.js");
+// getPassedUsersFirstVideoTitle("user3@hw.js");
+// getPassedUsersFirstVideoTitle("user2@hw.js");
+// getPassedUsersFirstVideoTitle("user1@hw.js");
 
 console.log("Finish");

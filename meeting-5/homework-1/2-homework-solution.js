@@ -61,9 +61,9 @@ const getPassedUsersFirstVideoTitle = (user) =>
   }, (err) => displayError(err) );
 
 
-getPassedUsersFirstVideoTitle("user4@hw.js");
+// getPassedUsersFirstVideoTitle("user4@hw.js");
 getPassedUsersFirstVideoTitle("user3@hw.js");
-getPassedUsersFirstVideoTitle("user2@hw.js");
-getPassedUsersFirstVideoTitle("user1@hw.js");
+// getPassedUsersFirstVideoTitle("user2@hw.js");
+// getPassedUsersFirstVideoTitle("user1@hw.js");
 
 console.log("Finish");
