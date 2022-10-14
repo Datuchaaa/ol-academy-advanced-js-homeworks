@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title of the document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>ToDo List</h1>
+        <div class="wrapper" id="newtask">
+            <div class="input">
+                <input type="text" placeholder="Enter task">
+                <button id="push">Add</button>
+            </div>
+                <div id="tsk"></div>
+        </div>
+    </div>
+   
+</body>
+
+</html>
+
+<style>
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+ 
+    }
+    button{
+        border-radius: 5px;
+        border: none;
+        width: 60px;
+        height: 30px;
+        color: gray;
+        background-color: aqua;
+        cursor: pointer;
+    }
+    #tsk{
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .input{
+        border-radius: 5px;
+        padding-bottom: 15px;
+        display: flex;
+    }
+    input{
+        border-radius: 5px;
+        width: 200px;
+        height: 25px;
+       border: 2px solid #d1d3d3;
+        outline: none;
+    }
+    .task{
+        width: 204px;
+        height: 25px;
+       border: 2px solid #d1d3d3;
+    }
+    
+    .wrapepr{
+       
+        display: flex;
+        justify-content: center;
+    }
+    h1{
+        color: rebeccapurple;
+    }
+    
+</style>
+<script>
+    document.querySelector('#push').onclick = function(){
+        if(document.querySelector('#newtask input').value.length == 0){
+            alert("please enter task")
+        } else{
+            document.querySelector('#tsk').innerHTML
+            += `<div class="input">
+             <div id="tsk" class="task">${document.querySelector('#newtask input').value}</div>
+             <button id="delete">Delete</button>
+             </div>`;
+
+             let currentTask = document.querySelectorAll('#delete');
+
+             for (let i = 0; i < currentTask.length; i++){
+                currentTask[i].onclick = function (){
+                    this.parentNode.remove();
+                }
+             }
+            let tasks = document.querySelectorAll('#tsk');
+
+             for (let i = 0; i < tasks.length; i++){
+                tasks[i].onclick = function (){
+                    this.classList.toggle('done')
+                }
+             }
+            document.querySelector('#newtask input').value = "";
+        }
+        
+    }
+</script>
+
